@@ -35,16 +35,18 @@ export default function VerificationScreen({ navigation }) {
                 />
 
                 {/* Nút gửi lại mã */}
-                <TouchableOpacity>
-                    <Text style={styles.resendText}>Resend Code</Text>
-                </TouchableOpacity>
-
-                {/* Nút tiếp tục */}
-                {otp.length === 4 && (
-                    <TouchableOpacity style={styles.nextButton}>
-                        <ArrowRight size={24} color="white" />
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity>
+                        <Text style={styles.resendText}>Resend Code</Text>
                     </TouchableOpacity>
-                )}
+                    {otp.length === 4 && (
+                        <TouchableOpacity style={styles.nextButton}>
+                            <ArrowRight size={24} color="white" />
+                        </TouchableOpacity>
+                    )}
+                </View>
+
+
 
             </View>
         </TouchableWithoutFeedback>
@@ -98,16 +100,21 @@ const styles = StyleSheet.create({
         height: 1,
         opacity: 0,
     },
+    buttonContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingHorizontal: 20, // Thêm khoảng cách hai bên
+        marginTop: 20, // Điều chỉnh vị trí
+    },
+
     resendText: {
         textAlign: "center",
         color: "#28A745",
-        fontSize: 14,
+        fontSize: 16,
         marginTop: 20,
     },
     nextButton: {
-        position: "absolute",
-        right: 20,
-        bottom: 50,
         backgroundColor: "#28A745",
         width: 50,
         height: 50,
