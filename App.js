@@ -8,7 +8,7 @@ import SignInScreen from './Screen/SignInScreen';
 import NumberScreen from './Screen/NumberScreen';
 import VerificationScreen from './Screen/VerificationScreen';
 
-
+ 
 const Stack = createStackNavigator();
 
 export default function App() {
