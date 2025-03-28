@@ -5,7 +5,7 @@ import { CircleArrowLeft, ArrowRight } from "lucide-react-native";
 export default function NumberScreen({ navigation }) {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [isFocused, setIsFocused] = useState(false);
-
+ 
     return (
         <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : "height"}
