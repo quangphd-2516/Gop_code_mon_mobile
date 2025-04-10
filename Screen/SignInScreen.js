@@ -18,12 +18,12 @@ export default function SignInScreen({ navigation }) {
             {/* Phần nội dung chiếm 60% màn hình */}
             <View style={styles.contentContainer} >
                 <Text style={styles.textmain}>Get your groceries with nectar</Text>
-                <TouchableOpacity style={styles.inputContainer} >
+                <TouchableOpacity style={styles.inputContainer} onPress={() => navigation.navigate("NumberScreen")} activeOpacity={1}>
                     <Image
                         source={{ uri: "https://s3-alpha-sig.figma.com/img/41cc/144b/fb38ac5a94c5de8628b3bed5259fb5f1?Expires=1742169600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=DJkBdNFGX~ZTTw2B72sQBYfIP1QTSQObzmqfy4reEgIdzhaeSY0pmSfkxyHv00QX1D2Ij2qAC4MpAX~jswfP2HUoUmoGSCjI8xEZVemrA3cXS4mSgmfulZrVEaei816qdNrjTab9U5-K8l9EfVLFLTwCAHwh14Cf4KMyPJ3qScoSpLKYHu25AWWV3oz-wdt~-a4jM2ZoWcdpwzPOux50awHO-roKUMQ7SQXAp0XN0dVqU74muBaE3jAnyUKsSA0aY0QE~dT7r1SEFgDaftXKa6HQyvAIyhUfLyGmk3x15GFj06FXovX~tg93uObczaqLKftQT5esn5Z8CvzSXctCDw__" }}
                         style={styles.flagIcon}
                     />
-                    <TextInput style={styles.textInput} onPress={() => navigation.navigate("NumberScreen")} keyboardType="numeric" placeholder="+088" />
+                    <TextInput style={styles.textInput} placeholder="+088" editable={false} />
                 </TouchableOpacity>
 
 

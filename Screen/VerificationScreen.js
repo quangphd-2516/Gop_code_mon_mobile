@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { View, Text, TextInput, TouchableOpacity, Keyboard, StyleSheet, TouchableWithoutFeedback } from "react-native";
-import { CircleArrowLeft, ArrowRight } from "lucide-react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+
+
 
 export default function VerificationScreen({ navigation }) {
     const [otp, setOtp] = useState("");
@@ -9,10 +11,9 @@ export default function VerificationScreen({ navigation }) {
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.container}>
-
                 {/* Nút Back */}
                 <TouchableOpacity style={styles.backButton} onPress={() => { navigation.navigate("NumberScreen") }}>
-                    <CircleArrowLeft size={40} color="black" />
+                    <Ionicons name="chevron-back" size={40} color="black" />
                 </TouchableOpacity>
 
                 {/* Tiêu đề */}
@@ -41,15 +42,14 @@ export default function VerificationScreen({ navigation }) {
                     </TouchableOpacity>
                     {otp.length === 4 && (
                         <TouchableOpacity style={styles.nextButton}>
-                            <ArrowRight size={24} color="white" />
+                            <Ionicons name="chevron-forward" size={40} color="white" onPress={() => { navigation.navigate("SelectLocation") }} />
+
                         </TouchableOpacity>
                     )}
                 </View>
-
-
-
             </View>
         </TouchableWithoutFeedback>
+
     );
 }
 
@@ -104,9 +104,13 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingHorizontal: 20, // Thêm khoảng cách hai bên
-        marginTop: 20, // Điều chỉnh vị trí
+        paddingHorizontal: 20,
+        position: "absolute",
+        bottom: 40,
+        left: 0,
+        right: 0,
     },
+
 
     resendText: {
         textAlign: "center",

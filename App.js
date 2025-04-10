@@ -8,7 +8,12 @@ import SignInScreen from './Screen/SignInScreen';
 import NumberScreen from './Screen/NumberScreen';
 import VerificationScreen from './Screen/VerificationScreen';
 
- 
+import SelectLocation from './Screen/SelectLocation';
+import Login from './Screen/Login';
+import Signup from './Screen/Signup';
+import ShopScreen from './Screen/ShopScreen';
+
+
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -20,6 +25,10 @@ export default function App() {
         <Stack.Screen name="SignInScreen" component={SignInScreen} />
         <Stack.Screen name="NumberScreen" component={NumberScreen} />
         <Stack.Screen name="VerificationScreen" component={VerificationScreen} />
+        <Stack.Screen name="SelectLocation" component={SelectLocation} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup} />
+        <Stack.Screen name="ShopScreen" component={ShopScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
