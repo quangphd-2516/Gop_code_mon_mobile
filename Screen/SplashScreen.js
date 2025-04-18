@@ -14,7 +14,7 @@ export default function SplashScreen({ navigation }) {
             <View style={styles.content}>
                 <Carrot size={70} color="white" />
                 <View>
-                    <Text style={styles.textmain}>ĐỖ MẠNH CƯỜNG</Text>
+                    <Text style={styles.textmain}>Nguyễn Trọng Quang D17CNPM55</Text>
                     <Text style={styles.text}>Online Groceries</Text>
                 </View>
             </View>
